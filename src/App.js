@@ -4,6 +4,7 @@ import Book from './Book';
 import Loader from "./Loader";
 import ClassConstructor from "./ClassConstructor";
 import LiveScyle from './LiveScyle';
+import KeyAtribute from './KeyAtribute';
 
 function App(props) {
   return props.loading ? (
@@ -17,7 +18,8 @@ function App(props) {
       <Book name='Vue for beginers' year='2023' price='150' />
     </div>,
     <ClassConstructor />,
-    <LiveScyle />
+    <LiveScyle />,
+    <KeyAtribute />
   )
 }
 
