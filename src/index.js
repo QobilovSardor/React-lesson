@@ -1,8 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import App from './App';
+
+const Book = (props) => {
+  console.log(props);
+  return React.createElement('div', {}, [
+    React.createElement('h2', {}, props.name),
+    React.createElement('h3', {}, props.year),
+    React.createElement('p', {}, props.price),
+  ])
+}
+
+const App = () => {
+  return React.createElement('div', {}, [
+    React.createElement('h1', { id: 'title', className: 'heading' }, 'Online kiborlar do\'koniga hush kelibsiz'),
+    React.createElement(Book, { name: 'JS for beginners', year: 2021, price: 50 }),
+    React.createElement(Book, { name: 'VueJS beginners', year: 2022, price: 100 }),
+    React.createElement(Book, { name: 'ReactJS for beginners', year: 2023, price: 150 }),
+  ])
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -10,8 +27,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
