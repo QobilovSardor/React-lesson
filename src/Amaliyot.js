@@ -22,6 +22,3 @@ const Amaliyot = () => {
   )
 }
 export default Amaliyot
-
-
-// code convengshin
