@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const isLoading = true
 root.render(
   <React.StrictMode>
-    <App />
+    <App loading={isLoading} />
   </React.StrictMode>
 );

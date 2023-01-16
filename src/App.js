@@ -1,9 +1,12 @@
 import './App.css';
 import Amaliyot from './Amaliyot';
 import Book from './Book';
+import Loader from "./Loader";
 
-function App() {
-  return (
+function App(props) {
+  return props.loading ? (
+    <Loader />
+  ) : (
     <div>
       <Book name='JS for beginers' year='2021' price='50'>
         Extra inform
