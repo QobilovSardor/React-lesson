@@ -1,29 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Amaliyot from './Amaliyot'
 // import App from './App';
 
-const Book = (props) => {
-  console.log(props);
-  return React.createElement('div', {}, [
-    React.createElement('h2', {}, props.name),
-    React.createElement('h3', {}, props.year),
-    React.createElement('p', {}, props.price),
-  ])
+const Book = ({name, year, price}) => {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>{year}</p>
+      <p>{price}</p>
+    </div>
+  )
 }
 
 const App = () => {
-  return React.createElement('div', {}, [
-    React.createElement('h1', { id: 'title', className: 'heading' }, 'Online kiborlar do\'koniga hush kelibsiz'),
-    React.createElement(Book, { name: 'JS for beginners', year: 2021, price: 50 }),
-    React.createElement(Book, { name: 'VueJS beginners', year: 2022, price: 100 }),
-    React.createElement(Book, { name: 'ReactJS for beginners', year: 2023, price: 150 }),
-  ])
+  return (
+    <div>
+      <Book name='JS for beginers' year='2021' price='50' />
+      <Book name='React for beginers' year='2022' price='100' />
+      <Book name='Vue for beginers' year='2023' price='150' />
+    </div>
+  )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <App />,
+    <Amaliyot />
+  </React.StrictMode>,
 );
