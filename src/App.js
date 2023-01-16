@@ -1,6 +1,6 @@
 import './App.css';
 import Amaliyot from './Amaliyot';
-import { Book } from './Book';
+import Book from './Book';
 
 function App() {
   return (
