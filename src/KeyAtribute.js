@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
 export default class KeyAtribute extends React.Component {
   state = {
     posts: [
       { id: 1, name: 'JavaScript' },
-      { id: 1, name: 'ReactJS' },
+      { id: 2, name: 'ReactJS' },
       { id: 1, name: 'VueJS' },
     ]
   }
@@ -12,8 +12,8 @@ export default class KeyAtribute extends React.Component {
   render() {
     return(
       <div>
-        {this.state.posts.map((post, index) => (
-          <p key={index}>{post.name}</p>
+        {this.state.posts.map((post, idx) => (
+          <p key={idx}>{post.name}</p>
         ))}
       </div>
     )
