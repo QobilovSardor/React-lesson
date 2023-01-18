@@ -6,14 +6,18 @@ export default class KeyAtribute extends React.Component {
     posts: [
       { id: 1, name: 'JavaScript' },
       { id: 2, name: 'ReactJS' },
-      { id: 1, name: 'VueJS' },
+      { id: 3, name: 'VueJS' },
     ]
   }
 
+  removePost = (id) => {
+    this.setState({ posts: this.state.posts.filter(post => post.id !== id) })
+  }
+
   render() {
-    return(
-      <div>
-        <Posts kluch={this.state.posts}/>
+    return (
+      <div className='posts'>
+        <Posts kluch={this.state.posts} removePost={this.removePost} />
       </div>
     )
   }

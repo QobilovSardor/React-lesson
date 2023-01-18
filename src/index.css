@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.posts {
+  background-color: teal;
+  width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.todo {
+  border-bottom: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  padding: 10px 25px;
+  background-color: orange;
+  border: 1px solid black;
+  cursor: pointer;
+}
