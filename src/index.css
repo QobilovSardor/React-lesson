@@ -29,3 +29,17 @@ code {
   border: 1px solid black;
   cursor: pointer;
 }
+.formApp {
+  width: 500px;
+  margin: 0 auto;
+  background-color: orange;
+  padding: 20px;
+}
+input {
+  padding: 7px 10px;
+}
+label {
+  padding: 10px 0;
+  /* color: teal; */
+  font-size: 20px;
+}
