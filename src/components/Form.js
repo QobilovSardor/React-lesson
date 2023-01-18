@@ -3,11 +3,19 @@ import React from 'react';
 class Form extends React.Component {
   state = {
     firstName: '',
-    email: ''
+    email: '',
+    message: '',
+    select: '',
+    subscribe: false,
+    gender: ''
   }
 
   changeValue = (e) => {
-    this.setState({[e.target.name]: e.target.value})
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  changeCheck = (e) => {
+    this.setState({ [e.target.name]: e.target.checked })
   }
 
   validateName = () => {
@@ -23,13 +31,13 @@ class Form extends React.Component {
   }
 
   render() {
-    const {firstName, email} = this.state
+    const { firstName, email, message, select, subscribe, gender } = this.state
     return (
       <div className='posts'>
         <h1>Form</h1>
         <label htmlFor="">Your name </label>
-        <input type="text" 
-          name= 'firstName'
+        <input type="text"
+          name='firstName'
           value={firstName}
           onChange={this.changeValue}
           onBlur={this.validateName}
@@ -41,7 +49,26 @@ class Form extends React.Component {
           value={email}
           onChange={this.changeValue}
           onBlur={this.validateEmail}
-        />
+        /> <br />
+        <label htmlFor="">Meesage </label>
+        <textarea name="message"
+          placeholder='Message' 
+          value={message} 
+          onChange={this.changeValue}></textarea>
+          <br />
+        <select name="select" value={select} onChange={this.changeValue} id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <br />
+          <label htmlFor="foo">
+            Subscribe
+          <input type="checkbox" id='foo' name="subscribe" value={subscribe} onChange={this.changeCheck} />
+          </label> <br />
+          <label htmlFor="">Gender</label>
+          <input type="radio" name="gender" value='male' onChange={this.changeValue} /> Male
+        <input type="radio" name="gender" value='female' onChange={this.changeValue} /> Female
       </div>
     );
   }
