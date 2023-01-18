@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Posts from './components/Posts';
 
 export default class KeyAtribute extends React.Component {
   state = {
@@ -12,9 +13,7 @@ export default class KeyAtribute extends React.Component {
   render() {
     return(
       <div>
-        {this.state.posts.map((post, idx) => (
-          <p key={idx}>{post.name}</p>
-        ))}
+        <Posts kluch={this.state.posts}/>
       </div>
     )
   }

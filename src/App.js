@@ -1,14 +1,15 @@
 import './App.css';
 import Amaliyot from './Amaliyot';
 import Book from './Book';
-import Loader from "./Loader";
+// import Loader from "./Loader";
 import ClassConstructor from "./ClassConstructor";
 import LiveScyle from './LiveScyle';
 import KeyAtribute from './KeyAtribute';
 
 function App(props) {
   return props.loading ? (
-    <Loader />
+    // <Loader />
+    <p>salom</p>
   ) : (
     <div>
       <Book name='JS for beginers' year='2021' price='50'>
