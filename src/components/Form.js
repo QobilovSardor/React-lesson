@@ -2,10 +2,15 @@ import React from 'react';
 import { Form, Input, Badge } from 'reactstrap';
 
 class Forms extends React.Component {
-  state = {
-    firstName: '',
-    email: '',
-    subscription: false,
+  constructor() {
+    super();
+    this.state = {
+      firstName: '',
+      email: '',
+      subscription: false,
+      card: '',
+      cv: ''
+    }
   }
 
   handleChange = (e) => {
@@ -15,6 +20,7 @@ class Forms extends React.Component {
   checkHadle = (e) => {
     this.setState({[e.target.name]: e.target.checked})
   }
+
   validateEmail = () => {
     const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     const isValidEmail = re.test(this.state.email);
@@ -34,10 +40,11 @@ class Forms extends React.Component {
   }
 
   render() {
-    const { email, subscription } = this.state
+    const { email, subscription, card, cv, firstName } = this.state
     return (
-      <div className='formApp'>
-        <h1 className='mb-4 text-center text-white'>Form</h1>
+      <div>
+        <div className='formApp'>
+          <h1 className='mb-4 text-center text-white'>Form</h1>
           <label htmlFor="foo">Your email</label>
           <Input
             id='foo'
@@ -59,6 +66,7 @@ class Forms extends React.Component {
           </label>
           <br />
           <button className='btn btn-primary mt-3' onClick={this.validateEmail}>Primary</button>
+        </div>
       </div>
     );
   }

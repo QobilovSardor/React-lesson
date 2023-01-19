@@ -5,7 +5,8 @@ import Loader from "./Loader";
 import ClassConstructor from "./ClassConstructor";
 import LiveScyle from './LiveScyle';
 import KeyAtribute from './KeyAtribute';
-import Form from './components/Form'
+import Form from './components/Form';
+import FormTwo from './components/FormTwo';
 
 function App(props) {
   return props.loading ? (
@@ -21,7 +22,8 @@ function App(props) {
     <ClassConstructor />,
     <LiveScyle />,
     <KeyAtribute />,
-    <Form />
+    <Form />,
+    <FormTwo />
   )
 }
 

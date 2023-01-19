@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+* {
+  box-sizing: border-box;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -37,9 +39,24 @@ code {
 }
 input {
   padding: 7px 10px;
+  box-sizing: border-box;
+  width: 100%;
 }
 label {
   padding: 10px 0;
   /* color: teal; */
   font-size: 20px;
+}
+.formApp-two {
+  display: flex;
+  box-sizing: border-box;
+  gap: 10px;
+}
+#foo {
+  display: block;
+  margin-top: 10px;
+}
+.btn {
+  width: 100%;
+  margin-top: 10px;
 }
